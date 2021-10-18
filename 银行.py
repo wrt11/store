@@ -10,7 +10,7 @@ print("*     5、查询          *")
 print("*     6、再见          *")
 print("***********************")
 #空字典
-bank={50118701: {'username': '1', 'password': '1', 'country': '1', 'province': '1', 'street': '1', 'door': '1', 'money': 5000000, 'bank_name': 'M73迪迦银行'}}
+bank={123456789: {'username': '1', 'password': '1', 'country': '1', 'province': '1', 'street': '1', 'door': '1', 'money': 5000000, 'bank_name': 'M73迪迦银行'}}
 #'F': {'account': 98835406, 'password': '1', 'country': '中国', 'porvince': '昌平', 'street': '001', 'door': '001', 'money': 0}
 bank_name="M73迪迦银行"
 #调用的函数元素是一一对应的，不是名称对应
