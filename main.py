@@ -1,30 +1,31 @@
-"""
+'''
+    1.加载所有的测试用例
+    2.执行用例并生成测试报告
+'''
+from HTMLTestRunner import HTMLTestRunner
+import unittest
 
-判断：
- 单分支 if   eles
- 多分支 if  elif   elif  elif ...... else
-10-90这个范围里面
-如果猜大了打印”猜大了“ 猜小了
-最多猜3次 锁屏 time.sleep(10)
-"""
-import random
-import time
 
-randint = random.randint(10, 90)  # 从10到90之前随机取一个数字
-num1 = randint
-cout = 0
-print("3次机会猜大小")
-while True:
-    cout = cout + 1
-    num = int(input("请输入一个数字"))
-    if num1 == num:
-        print("猜对了")
-        break
-    elif num1 > num and cout < 3:
-        print("猜小了")
-    elif num1 < num and cout < 3:
-        print("猜大了")
-    elif num1 != num and cout == 3:
-        print("将在10秒后锁屏")
-        time.sleep(10)
-        break
+# 1.加载所有用例
+tests = unittest.defaultTestLoader.discover(r"C:\Users\灵\PycharmProjects\pythonProject\day。13",pattern="Test*.py")
+
+# 2.创建运行器
+runner = HTMLTestRunner.HTMLTestRunner(
+    title = "测试报告",
+    description="这是计算器的测试报告",
+    verbosity=1,
+    stream = open(file="计算器.html", mode="w+", encoding="utf-8")
+)
+
+# 3.执行用例
+runner.run(tests)
+
+
+
+
+# 4.任务： 使用邮件发送附件，把报告发送给我
+
+
+
+
+
