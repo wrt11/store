@@ -7,7 +7,7 @@ import unittest
 
 
 # 1.加载所有用例
-tests = unittest.defaultTestLoader.discover(r"/day。13", pattern="Test*.py")
+tests = unittest.defaultTestLoader.discover(r"C:\Users\灵\PycharmProjects\pythonProject\day。13", pattern="Test*.py")
 
 # 2.创建运行器
 runner = HTMLTestRunner.HTMLTestRunner(
